@@ -63,4 +63,11 @@ class CustomerResource extends Resource
             'edit' => Pages\EditCustomer::route('/{record}/edit'),
         ];
     }    
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ManageCustomers::route('/'),
+        ];
+    }   
 }
