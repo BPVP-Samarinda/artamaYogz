@@ -28,7 +28,7 @@ class CustomerResource extends Resource
                 ->minDate(now()->subYears(150))
                 ->maxDate(now()),
                 Forms\Components\Radio::make('jenis_kelamin')
-                ->option([
+                ->options([
                     'L' => 'Laki-laki',
                     'P' => 'Perempuan',
                 ]),
