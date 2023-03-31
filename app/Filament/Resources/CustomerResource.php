@@ -23,7 +23,7 @@ class CustomerResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('nama'),
+                Forms\Components\Textinput::make('nama'),
                 Forms\Components\DatePicker::make('tanggal_lahir')
                 ->minDate(now()->subYears(150))
                 ->maxDate(now()),
@@ -32,8 +32,8 @@ class CustomerResource extends Resource
                     'L' => 'Laki-laki',
                     'P' => 'Perempuan',
                 ]),
-                Forms\Components\TextInput::make('alamat'),
-                Forms\Components\TextInput::make('email'),
+                Forms\Components\Textinput::make('alamat'),
+                Forms\Components\Textinput::make('email'),
             ]);
     }
 
