@@ -42,26 +42,17 @@ class CustomerResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
     
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-    
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCustomers::route('/'),
-            'create' => Pages\CreateCustomer::route('/create'),
-            'edit' => Pages\EditCustomer::route('/{record}/edit'),
+            'index' => Pages\ManageCustomers::route('/'),
         ];
     }    
-
 }
